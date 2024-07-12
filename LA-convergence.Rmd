@@ -1,0 +1,71 @@
+---
+title: "LA Convergence"
+output: html_document
+date: "2024-07-10"
+---
+###Libraries
+```{r}
+library(tidyverse)
+library(readxl)
+library(igraph)
+```
+
+###Data Cleaning and Structuring
+```{r}
+L1 <- read_excel("LAK data.xlsx")
+
+L2 <- select(L1, Authors, `Publication Year`)
+
+L2$id <- seq(1,1375,1)
+
+L3 <- L2 %>% add_column(author = L2$Authors %>% str_split(';', simplify = T))
+#L3 <- as.data.frame(L3)
+
+L4 <- L3 %>%
+  mutate_at("author", as.data.frame) |> 
+  unnest(author)
+
+#L4 <- bind_rows(replicate(13,L3, simplify=F)) 
+
+L4 <- L4 %>% select(-Authors)
+
+L5 <- L4 %>%
+  pivot_longer(
+    cols = 3:15,
+    names_to = "author_number",
+    values_to = "author"
+  )
+
+L5 <- filter(L5, author != "")
+
+L6 <- select(L5, id, author)
+L6$value <- 1
+
+L6 <- pivot_wider(L6, names_from = author, values_from = value)
+rownames(L6) <- L6$id
+L6$id <- NULL
+M6 <- as.matrix(L6)
+M6[is.na(M6)]<-0
+
+M7 <- t(M6) %*% M6
+
+diag(M7) <- NA
+
+```
+
+###Graph Network
+```{r}
+g1 <- graph_from_adjacency_matrix(
+  M7,
+  mode = c("undirected"),
+  weighted = NULL,
+  diag = TRUE,
+  add.colnames = NULL,
+  add.rownames = NA
+)
+
+plot(g1, layout=layout_with_fr, vertex.size=5, label.cex = 0.1)
+
+```
+
+

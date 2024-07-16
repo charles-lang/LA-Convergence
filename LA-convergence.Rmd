@@ -8,15 +8,20 @@ date: "2024-07-10"
 library(tidyverse)
 library(readxl)
 library(igraph)
+library(janitor)
 ```
 
 ###Data Cleaning and Structuring
 ```{r}
 L1 <- read_excel("LAK data.xlsx")
 
-L2 <- select(L1, Authors, `Publication Year`)
+L2 <- L1 %>% filter(Series == "LAK '11" | Series == "LAK '12" | Series == "LAK '13" | Series == "LAK '14" | Series == "LAK '15" | Series == "LAK '16" | Series == "LAK '17" | Series == "LAK '18" | Series == "LAK '19" | Series == "LAK '20" | Series == "LAK 21" | Series == "LAK 22" | Series == "LAK 2023" | Series == "LAK '24")
 
-L2$id <- seq(1,1375,1)
+#L2 <- L1 %>% filter(substr(Series,1,1) == "L")
+  
+L2 <- select(L2, Authors, `Publication Year`)
+
+L2$id <- seq(1,nrow(L2),1)
 
 L3 <- L2 %>% add_column(author = L2$Authors %>% str_split(';', simplify = T))
 #L3 <- as.data.frame(L3)
@@ -31,7 +36,7 @@ L4 <- L4 %>% select(-Authors)
 
 L5 <- L4 %>%
   pivot_longer(
-    cols = 3:15,
+    cols = 3:6,
     names_to = "author_number",
     values_to = "author"
   )
@@ -64,7 +69,129 @@ g1 <- graph_from_adjacency_matrix(
   add.rownames = NA
 )
 
-plot(g1, layout=layout_with_fr, vertex.size=5, label.cex = 0.1)
+plot(g1, vertex.size=1, vertex.label=NA)
+
+Isolated = which(degree(g1)==0)
+g2 = delete.vertices(g1, Isolated)
+
+plot(g2, layout=layout_with_fr(g1), vertex.size=1, edge.width = 0.1, vertex.label=NA)
+
+Isolated2 = which(degree(g1) > 1)
+g3 = delete.vertices(g1, Isolated2)
+
+plot(g3, layout=layout_with_fr(g1), vertex.size=1, edge.width = 0.1, vertex.label=NA)
+
+Isolated3 = which(degree(g1) > 2)
+g4 = delete.vertices(g1, Isolated3)
+
+plot(g4, layout=layout_with_fr(g1), vertex.size=1, edge.width = 0.1, vertex.label=NA)
+
+Isolated4 = which(closeness(g1) > 0.04)
+g5 = delete.vertices(g1, Isolated4)
+
+plot(g5, vertex.size=2, edge.width = 0.2, vertex.label=NA)
+
+
+closeness_centrality <- closeness(g1)
+
+closeness_centrality[!is.finite(closeness_centrality)] <- 1
+
+if (any(!is.finite(closeness_centrality))) {
+  stop("Closeness centrality contains non-finite values.")
+}
+
+closeness_centrality_normalized <- (closeness_centrality - min(closeness_centrality)) / (max(closeness_centrality) - min(closeness_centrality))
+
+
+
+node_colors <- ifelse(closeness_centrality < 0.04, "blue", ifelse(closeness_centrality >= 0.04 & closeness_centrality < 0.6, "red", "green"))
+  
+  #colorRampPalette(c("blue", "red"))(100)[as.numeric(cut(closeness_centrality_normalized, breaks = 1))]
+
+plot(g1, vertex.size=3, vertex.label=NA, vertex.color = node_colors, main = "Nodes Colored by Closeness Centrality")
+
+hist(closeness_centrality_normalized)
+
+degree_centrality <- degree(g1)
+
+node_colors <- ifelse(degree_centrality < 1, "blue", "red")
+
+plot(g1, vertex.size=3, vertex.color = node_colors, vertex.label.cex = 0.3, main = "Nodes Colored by Degree Centrality")
+
+```
+###Network Metrics
+```{r}
+clu <- components(g1)
+groups(clu)
+
+hist(degree(g1), breaks =100)
+
+hist(closeness(g1), breaks =100)
+
+hist(betweenness(g1), breaks =100)
+
+```
+
+
+###Community Structure
+```{r}
+kc <- cluster_leiden(g5)
+
+n <- length(V(g5))
+
+kc <- cluster_leiden(g5, 
+                     resolution_parameter = sum(E(g1)$weight)/(n*(n-1)/2))
+
+
+length(kc)
+
+plot(kc,g5, vertex.size=1, edge.width = 0.1, vertex.label=NA)
+
+kc2 <- cluster_leiden(g5, objective_function = "modularity",
+                       n_iterations = 3, resolution_parameter = 0.5)
+plot(kc2,g5, vertex.size=1, edge.width = 0.1, vertex.label=NA)
+
+length(kc2)
+
+kc3 <- cluster_leiden(g5, objective_function = "modularity",
+                       n_iterations = 3, resolution_parameter = 0.75)
+plot(kc3,g5,vertex.size=1, edge.width = 0.1, vertex.label=NA)
+
+kc4 <- cluster_leiden(g5, objective_function = "modularity",
+                       n_iterations = 3, resolution_parameter = 1.0)
+plot(kc4,g5,vertex.size=1, edge.width = 0.1, vertex.label=NA)
+
+kc5 <- cluster_leiden(g5, objective_function = "modularity",
+                       n_iterations = 3, resolution_parameter = 1.5)
+plot(kc5,g5,vertex.size=1, edge.width = 0.1, vertex.label.cex = 0.5)
+
+length(kc5)
+
+kc6 <- cluster_leiden(g5, objective_function = "modularity",
+                       n_iterations = 3, resolution_parameter = 1.5)
+plot(kc6,g5,vertex.size=1, edge.width = 0.1, vertex.label.cex = 0.5)
+length(kc6)
+
+kc7 <- cluster_leiden(g5, 
+                     resolution_parameter = sum(E(g1)$weight)/(n*(n-1)/2))
+plot(kc7, g5, vertex.size=1, edge.width = 0.1, vertex.label.cex = 0.5)
+
+ebc1 <- edge.betweenness.community(g5, directed = F)
+
+plot(ebc1, g5, vertex.size=1, edge.width = 0.1, vertex.label= NA)
+
+wc1 <- walktrap.community(g5)
+
+plot(wc1, g5, vertex.size=1, edge.width = 0.1, vertex.label= NA)
+
+#Winner
+lec1 <- leading.eigenvector.community(g5)
+
+plot(lec1, g5, vertex.size=1, edge.width = 0.1, vertex.label.cex = 0.3)
+
+lpc <- label.propagation.community(g5)
+
+plot(lpc, g5, vertex.size=1, edge.width = 0.1, vertex.label= NA)
 
 ```
 

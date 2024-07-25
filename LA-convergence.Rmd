@@ -3,12 +3,32 @@ title: "LA Convergence"
 output: html_document
 date: "2024-07-10"
 ---
+## To Do
+
+SNA
+1. Build clean data set of all sources (LAK, HLA, JLA)
+2. Build paper-paper network
+3. Cluster network into outer (unconnected), outer clusters, core
+4. Cluster core into 6-10 communities with defensible methodology
+5. Line graph of growth of clusters over time
+6. Calculate number of uncconected papers that become connected each year
+7. Assign community label to each paper
+
+Topic Model
+1. Build topic model of all sources (LAK, HLA, JLA)
+2. Look at distribution for each source (LAK, HLA, JLA)
+3. Graph growth of topics over time
+4. Assign topic to communities for total data set
+5. Track movement of communities across topic space over time
+6. Map movement of communities across topic space over time
+
 ###Libraries
 ```{r}
 library(tidyverse)
 library(readxl)
 library(igraph)
 library(janitor)
+library(plotly)
 ```
 
 ###Data Cleaning and Structuring
@@ -137,6 +157,12 @@ hist(closeness(g1), breaks =100)
 
 hist(betweenness(g1), breaks =100)
 
+hist(degree(g2), breaks =100)
+
+hist(closeness(g2), breaks =10)
+
+hist(betweenness(g2), breaks =100)
+
 ```
 
 
@@ -211,9 +237,9 @@ g2 <- graph_from_adjacency_matrix(
   add.rownames = NA
 )
 
-plot(g2, vertex.size=1, vertex.label=NA)
+plot(g2, vertex.size=5, vertex.label=NA)
 
-lec1 <- leading.eigenvector.community(g2)
+lec1 <- leading.eigenvector.community(g2, weights = NULL)
 
 plot(lec1, g2, vertex.size=1, edge.width = 0.1, vertex.label=NA)
 
@@ -221,6 +247,161 @@ ebc1 <- edge.betweenness.community(g2, directed = F)
 
 plot(ebc1, g2, vertex.size=1, edge.width = 0.1, vertex.label= NA)
 
+lou <- cluster_louvain(g2)
+
+plot(lou, g2, vertex.size=5, edge.width = 0.1, vertex.label= NA)
+
+Small = which(table(lou$membership) < 20)
+Keep = V(g2)[!(lou$membership %in% Small)]
+
+gD2  = induced_subgraph(g2, Keep)
+lou2 = cluster_louvain(gD2)
+LO = layout_with_fr(g2)
+LO2 = LO[Keep,]
+plot(lou2, gD2, vertex.label = NA, vertex.size=5, 
+    edge.arrow.size = .2, layout=LO2)
+
+
+Isolated = which(degree(g2) < 5)
+g3 = delete.vertices(g2, Isolated)
+
+plot(g3, vertex.size=5, vertex.label=NA)
+
+csg1 <- gD2 %>% cluster_spinglass(spins = 6)
+
+plot(csg1, gD2, vertex.size=5, vertex.label=NA)
+
+closeness_centrality <- closeness(g2)
+
+closeness_centrality[!is.finite(closeness_centrality)] <- 1
+
+if (any(!is.finite(closeness_centrality))) {
+  stop("Closeness centrality contains non-finite values.")
+}
+
+closeness_centrality_normalized <- (closeness_centrality - min(closeness_centrality)) / (max(closeness_centrality) - min(closeness_centrality))
+
+
+
+node_colors <- ifelse(closeness_centrality < 0.02, "blue", ifelse(closeness_centrality >= 0.02 & closeness_centrality < 1, "red", "green"))
+  
+  #colorRampPalette(c("blue", "red"))(100)[as.numeric(cut(closeness_centrality_normalized, breaks = 1))]
+
+plot(g2, vertex.size=3, vertex.label=NA, vertex.color = node_colors, main = "Nodes Colored by Closeness Centrality")
+
+degree_centrality <- degree(g2)
+
+degree_centrality_normalized <- (degree_centrality - min(degree_centrality)) / (max(degree_centrality) - min(degree_centrality))
+
+hist(degree_centrality, breaks = 100)
+table(degree_centrality)
+hist(degree_centrality_normalized, breaks = 100)
+
+node_colors <- ifelse(degree_centrality_normalized < 0.01, "blue", ifelse(degree_centrality_normalized >= 0.01 & degree_centrality_normalized < 0.02, "red", "green"))
+  
+  #colorRampPalette(c("blue", "red"))(100)[as.numeric(cut(closeness_centrality_normalized, breaks = 1))]
+
+plot(g2, vertex.size=3, vertex.label=NA, vertex.color = node_colors, main = "Nodes Colored by Degree Centrality")
+
+
+
+node_colors <- ifelse(degree_centrality_normalized == 0, "green", ifelse(degree_centrality_normalized != 0 & closeness_centrality < 0.02, "red", "blue"))
+                      
+                
+
+plot(g2, vertex.size=5, vertex.label=NA, vertex.color = node_colors, main = "Nodes Colored by Degree/Closeness Centrality")
+
+hist(closeness_centrality)
+
 ```
 
+```{r}
+Isolated = which(closeness(g2) > 0.02 & degree(g2) != 0 | degree(g2) == 0)
+g2b = delete.vertices(g2, Isolated)
+
+plot(g2b, vertex.size=5, vertex.label=NA)
+
+lpc <- label.propagation.community(g2b)
+
+length(lpc)
+
+plot(lpc, g2b, vertex.size=1, edge.width = 0.1, vertex.label= NA)
+
+csg1 <- g2b %>% cluster_spinglass(spins = 8)
+
+plot(csg1, g2b, vertex.size=5, vertex.label=NA)
+
+plot_ly(g2b)
+
+n <- length(V(g2b))
+
+csg2 <- cluster_spinglass(g2b, gamma = 0.01)
+
+plot(csg2, g2b, vertex.size=5, vertex.label=NA)
+
+length(csg2)
+
+#kc <- cluster_leiden(g2b, resolution_parameter = 0.001)
+
+#length(kc)
+
+#plot(kc,g2b, vertex.size=1, edge.width = 0.1, vertex.label=NA)
+
+matrix_spinglass <- matrix(NA, nrow=1,ncol=100)
+ 
+for (i in 1:100) {
+set.seed(i)
+spinglass <- spinglass.community(g2b, gamma = 0.01)
+matrix_spinglass[1,i] <- max(spinglass$membership) 
+}
+ 
+mean(as.vector(matrix_spinglass))
+max(as.vector(matrix_spinglass)) 
+min(as.vector(matrix_spinglass))
+median(as.vector(matrix_spinglass))
+
+matrix(NA, nrow=1,ncol=100)
+
+```
+Plotly
+```{r}
+layout <- layout_with_fr(g2b)
+
+nodes <- data.frame(id = V(g2b)$name, 
+                    x = layout[, 1], 
+                    y = layout[, 2])
+
+
+edges <- data.frame(
+  source = as.character(ends(g2b, es = E(g2b))[, 1]),
+  target = as.character(ends(g2b, es = E(g2b))[, 2])
+)
+
+fig <- plot_ly(type = 'scatter', mode = 'markers+text')
+
+fig <- fig %>% 
+  add_trace(
+    x = ~nodes$x,
+    y = ~nodes$y,
+    text = ~nodes$id,
+    textposition = "top center",
+    marker = list(size = 10, color = 'blue'),
+    type = 'scatter'
+  )
+
+# Add edges
+for (i in 1:nrow(edges)) {
+  fig <- fig %>%
+    add_trace(
+      x = c(nodes[nodes$id == edges$source[i], ]$x, nodes[nodes$id == edges$target[i], ]$x),
+      y = c(nodes[nodes$id == edges$source[i], ]$y, nodes[nodes$id == edges$target[i], ]$y),
+      mode = 'lines',
+      line = list(color = 'black')
+    )
+}
+
+# Show the plot
+fig
+
+```
 

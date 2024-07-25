@@ -75,9 +75,13 @@ L6 <- column_to_rownames(L6, "id")
 M6 <- as.matrix(L6)
 M6[is.na(M6)]<-0
 
+#Author-Author Matrix
+
 M7 <- t(M6) %*% M6
 
 diag(M7) <- NA
+
+#Paper-Paper Network
 
 M8 <- M6 %*% t(M6)
 

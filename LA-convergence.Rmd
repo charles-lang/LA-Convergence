@@ -39,9 +39,10 @@ L1 <- read_excel("LAK data_cleaned.xlsx")
 
 #L2 <- L1 %>% filter(Series == "LAK '11" | Series == "LAK '12" | Series == "LAK '13" | Series == "LAK '14" | Series == "LAK '15" | Series == "LAK '16" | Series == "LAK '17" | Series == "LAK '18" | Series == "LAK '19" | Series == "LAK '20" | Series == "LAK 21" | Series == "LAK 22" | Series == "LAK 2023" | Series == "LAK '24")
 
-L2 <- L1 %>% filter(substr(Series,1,1) == "L")
+#Select just LAK
+#L2 <- L1 %>% filter(substr(Series,1,1) == "L")
   
-L2 <- select(L2, Authors, `Publication Year`)
+L2 <- select(L1, Authors, `Publication Year`)
 
 L2$id <- seq(1,nrow(L2),1)
 L2$id <- paste0("P",L2$id)

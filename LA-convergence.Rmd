@@ -8,7 +8,9 @@ date: "2024-07-10"
 SNA
 1. Build clean data set of all sources (LAK, HLA, JLA)
 2. Build paper-paper network
+2b. Check that the number of papers in the network = the number in the dataset
 3. Cluster network into outer (unconnected), outer clusters, core
+3b. Cluster the network according to the source (LAK, HLA, JLA)
 4. Cluster core into 6-10 communities with defensible methodology
 5. Line graph of growth of clusters over time
 6. Calculate number of uncconected papers that become connected each year
@@ -33,7 +35,7 @@ library(plotly)
 
 ###Data Cleaning and Structuring
 ```{r}
-L1 <- read_excel("LAK data.xlsx")
+L1 <- read_excel("LAK data_cleaned.xlsx")
 
 #L2 <- L1 %>% filter(Series == "LAK '11" | Series == "LAK '12" | Series == "LAK '13" | Series == "LAK '14" | Series == "LAK '15" | Series == "LAK '16" | Series == "LAK '17" | Series == "LAK '18" | Series == "LAK '19" | Series == "LAK '20" | Series == "LAK 21" | Series == "LAK 22" | Series == "LAK 2023" | Series == "LAK '24")
 
@@ -100,7 +102,7 @@ g1 <- graph_from_adjacency_matrix(
   add.rownames = NA
 )
 
-plot(g1, vertex.size=1, vertex.label=NA)
+plot(g1, vertex.size=5, vertex.label=NA)
 
 Isolated = which(degree(g1)==0)
 g2 = delete.vertices(g1, Isolated)
@@ -231,6 +233,7 @@ lpc <- label.propagation.community(g5)
 plot(lpc, g5, vertex.size=1, edge.width = 0.1, vertex.label= NA)
 
 ```
+### Paper-Paper Network
 ```{r}
 g2 <- graph_from_adjacency_matrix(
   M8,
@@ -254,6 +257,8 @@ plot(ebc1, g2, vertex.size=1, edge.width = 0.1, vertex.label= NA)
 lou <- cluster_louvain(g2)
 
 plot(lou, g2, vertex.size=5, edge.width = 0.1, vertex.label= NA)
+
+
 
 Small = which(table(lou$membership) < 20)
 Keep = V(g2)[!(lou$membership %in% Small)]
@@ -320,10 +325,14 @@ hist(closeness_centrality)
 ```
 
 ```{r}
+
+#Cut out core of network
 Isolated = which(closeness(g2) > 0.02 & degree(g2) != 0 | degree(g2) == 0)
 g2b = delete.vertices(g2, Isolated)
 
 plot(g2b, vertex.size=5, vertex.label=NA)
+
+length(g2)
 
 lpc <- label.propagation.community(g2b)
 
@@ -367,6 +376,7 @@ median(as.vector(matrix_spinglass))
 matrix(NA, nrow=1,ncol=100)
 
 ```
+
 Plotly
 ```{r}
 layout <- layout_with_fr(g2b)

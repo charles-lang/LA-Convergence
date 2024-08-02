@@ -31,6 +31,10 @@ library(readxl)
 library(igraph)
 library(janitor)
 library(plotly)
+library(RColorBrewer)
+library(sand)
+library(grDevices)
+library(visNetwork)
 ```
 
 ###Data Cleaning and Structuring
@@ -167,7 +171,7 @@ plot(g4, vertex.size=5, vertex.label=NA, main = "Isolated Clusters")
 Isolated = which(closeness(g3) > 0.05 & degree(g3) != 0 | degree(g2) == 0)
 g5 = delete.vertices(g3, Isolated)
 
-plot(g5, layout=layout_nicely(g5), vertex.size=1.5, vertex.label=NA, edge.width = 0.1, main = "Core")
+plot(g5, layout=layout_nicely(g5), vertex.size=3, vertex.label=NA, edge.width = 0.1, main = "Core")
 
 
 ```
@@ -193,13 +197,54 @@ plot(csg, g5, vertex.size=1.5, edgeth.width = 0.1, vertex.label=NA)
 ```
 ###Plot by communities
 ```{r}
+COMP = components(g3)
+table(COMP$membership)
 
-palette1 = g5.RainbowPalette(n=csg)
-for i, community in enumerate(communities):
-    g.vs[community]["color"] = i
-    community_edges = g.es.select(_within=community)
-    community_edges["color"] = i
+SC = which(COMP$membership != 1)
+SmallComps = induced_subgraph(g3, SC)
 
+SC.gn.comm <- cluster_edge_betweenness(SmallComps)
+colors <- rainbow(max(membership(SC.gn.comm)))
+plot(SC.gn.comm, SmallComps, vertex.size = 6, 
+    vertex.color=colors[membership(SC.gn.comm)], 
+    vertex.label = NA, edge.width = 1)
+
+LC = which(COMP$membership == 1)
+LargeComp = induced_subgraph(g3, LC)
+
+LC.gn.comm <- cluster_edge_betweenness(LargeComp)
+max(LC.gn.comm$membership)
+
+colors <- rainbow(max(membership(LC.gn.comm)))
+set.seed(1234)
+plot(LC.gn.comm, LargeComp, vertex.size = 6, 
+    vertex.color=colors[membership(LC.gn.comm)], 
+    vertex.label = NA, edge.width = 1)
+
+LC_Grouped = LargeComp
+E(LC_Grouped)$weight = 1
+for(i in unique(membership(LC.gn.comm))) {
+    GroupV = which(membership(LC.gn.comm) == i)
+    LC_Grouped = add_edges(LC_Grouped, combn(GroupV, 2), attr=list(weight=6))
+} 
+
+set.seed(1234)
+LO = layout_with_fr(LC_Grouped)
+colors <- rainbow(max(membership(LC.gn.comm)))
+par(mar=c(0,0,0,0))
+plot(LC.gn.comm, LargeComp, layout=LO,
+    vertex.size = 6, 
+    vertex.color=colors[membership(LC.gn.comm)], 
+    vertex.label = NA, edge.width = 1)
+
+GN.Comm = simplify(contract(LargeComp, membership(LC.gn.comm)))
+D = unname(degree(GN.Comm))
+
+set.seed(1234)
+par(mar=c(0,0,0,0))
+plot(GN.Comm, vertex.size=2*sqrt(sizes(LC.gn.comm)),
+    vertex.label=1:43, vertex.cex = 0.8,
+    vertex.color=round(log(D))+1)
 
 ```
 
@@ -400,7 +445,34 @@ median(as.vector(matrix_spinglass))
 
 matrix(NA, nrow=1,ncol=100)
 
+plot(g5, 
+     vertex.label = NA,
+     edge.color = 'gray',
+     vertex.size = 0.04*sqrt(betweenness(g5))+1,
+     edge.arrow.size = 0.05,
+     layout = layout_nicely(g5))
+
 ```
+##Separate by Communities
+```{r}
+E(LC_Grouped)$weight = 1
+for(i in unique(membership(LC.gn.comm))) {
+    GroupV = which(membership(LC.gn.comm) == i)
+    LC_Grouped = add_edges(LC_Grouped, combn(GroupV, 2), attr=list(weight=6))
+} 
+
+set.seed(1234)
+LO = layout_with_fr(LC_Grouped)
+colors <- rainbow(max(membership(LC.gn.comm)))
+par(mar=c(0,0,0,0))
+plot(LC.gn.comm, LargeComp, layout=LO,
+    vertex.size = 6, 
+    vertex.color=colors[membership(LC.gn.comm)], 
+    vertex.label = NA, edge.width = 1)
+
+
+```
+
 
 Plotly
 ```{r}

@@ -1,0 +1,1376 @@
+﻿Name,Community,Structure
+P1,4,core
+P2,4,core
+P4,2,core
+P5,2,core
+P6,3,core
+P10,3,core
+P11,5,core
+P12,5,core
+P13,2,core
+P15,4,core
+P16,4,core
+P18,5,core
+P20,3,core
+P21,5,core
+P22,1,core
+P24,5,core
+P25,1,core
+P26,5,core
+P31,3,core
+P32,2,core
+P33,1,core
+P34,7,core
+P36,4,core
+P37,5,core
+P38,2,core
+P40,4,core
+P45,7,core
+P47,5,core
+P48,5,core
+P49,2,core
+P52,1,core
+P53,3,core
+P54,7,core
+P55,2,core
+P57,4,core
+P60,1,core
+P63,2,core
+P64,7,core
+P71,1,core
+P72,5,core
+P73,3,core
+P79,7,core
+P80,4,core
+P82,4,core
+P85,2,core
+P86,5,core
+P87,3,core
+P89,4,core
+P90,2,core
+P91,2,core
+P92,2,core
+P93,4,core
+P94,5,core
+P95,5,core
+P96,5,core
+P97,5,core
+P99,5,core
+P103,3,core
+P104,1,core
+P105,2,core
+P106,5,core
+P113,7,core
+P114,7,core
+P115,3,core
+P117,4,core
+P118,7,core
+P119,4,core
+P122,2,core
+P123,2,core
+P124,1,core
+P125,3,core
+P126,5,core
+P129,7,core
+P130,5,core
+P131,3,core
+P132,4,core
+P133,7,core
+P134,2,core
+P137,7,core
+P140,7,core
+P142,4,core
+P143,5,core
+P144,7,core
+P145,1,core
+P146,1,core
+P150,3,core
+P151,3,core
+P152,7,core
+P154,4,core
+P156,7,core
+P158,3,core
+P159,2,core
+P160,5,core
+P161,4,core
+P162,1,core
+P165,3,core
+P167,7,core
+P170,2,core
+P173,4,core
+P179,3,core
+P181,1,core
+P182,3,core
+P183,1,core
+P184,2,core
+P185,3,core
+P186,5,core
+P187,7,core
+P188,7,core
+P190,3,core
+P191,5,core
+P192,5,core
+P193,3,core
+P194,3,core
+P195,7,core
+P196,5,core
+P198,1,core
+P200,2,core
+P201,5,core
+P202,7,core
+P203,7,core
+P205,7,core
+P206,1,core
+P210,1,core
+P211,7,core
+P212,7,core
+P216,1,core
+P218,7,core
+P219,2,core
+P220,7,core
+P221,1,core
+P222,7,core
+P223,1,core
+P224,5,core
+P225,2,core
+P227,7,core
+P228,5,core
+P230,5,core
+P232,5,core
+P233,7,core
+P234,7,core
+P236,4,core
+P237,7,core
+P238,2,core
+P239,2,core
+P240,4,core
+P241,4,core
+P242,5,core
+P243,2,core
+P244,3,core
+P245,1,core
+P246,4,core
+P247,3,core
+P249,4,core
+P252,4,core
+P256,3,core
+P260,5,core
+P262,2,core
+P264,7,core
+P265,1,core
+P266,2,core
+P267,7,core
+P269,7,core
+P270,1,core
+P272,5,core
+P275,1,core
+P276,3,core
+P277,2,core
+P278,2,core
+P279,3,core
+P280,2,core
+P282,7,core
+P283,2,core
+P286,4,core
+P289,7,core
+P291,3,core
+P292,4,core
+P294,2,core
+P295,5,core
+P298,7,core
+P299,1,core
+P300,4,core
+P303,7,core
+P305,3,core
+P306,5,core
+P307,1,core
+P308,5,core
+P309,7,core
+P310,5,core
+P315,1,core
+P316,5,core
+P317,7,core
+P320,4,core
+P321,5,core
+P322,2,core
+P323,5,core
+P324,5,core
+P325,7,core
+P326,7,core
+P327,7,core
+P328,7,core
+P329,2,core
+P330,7,core
+P331,2,core
+P333,1,core
+P334,4,core
+P336,3,core
+P337,3,core
+P339,4,core
+P340,5,core
+P341,1,core
+P342,5,core
+P343,5,core
+P344,2,core
+P345,3,core
+P346,5,core
+P347,5,core
+P349,3,core
+P350,2,core
+P353,5,core
+P355,4,core
+P356,5,core
+P357,5,core
+P358,7,core
+P359,7,core
+P361,3,core
+P362,7,core
+P363,2,core
+P366,1,core
+P367,5,core
+P368,5,core
+P371,7,core
+P372,7,core
+P373,3,core
+P374,7,core
+P377,1,core
+P378,5,core
+P379,3,core
+P380,5,core
+P382,4,core
+P386,2,core
+P388,5,core
+P389,7,core
+P391,3,core
+P392,7,core
+P393,1,core
+P394,1,core
+P396,2,core
+P397,6,core
+P398,3,core
+P400,7,core
+P401,5,core
+P402,5,core
+P403,4,core
+P404,3,core
+P406,4,core
+P409,2,core
+P410,4,core
+P411,7,core
+P412,1,core
+P413,7,core
+P414,3,core
+P415,5,core
+P417,5,core
+P419,2,core
+P420,6,core
+P423,7,core
+P425,6,core
+P426,5,core
+P427,1,core
+P428,7,core
+P429,7,core
+P430,6,core
+P431,2,core
+P432,5,core
+P433,2,core
+P434,5,core
+P435,2,core
+P436,7,core
+P437,7,core
+P438,1,core
+P440,3,core
+P441,3,core
+P442,4,core
+P443,5,core
+P444,2,core
+P445,5,core
+P446,7,core
+P448,5,core
+P449,2,core
+P451,4,core
+P452,2,core
+P453,2,core
+P454,4,core
+P466,7,core
+P467,7,core
+P469,3,core
+P472,7,core
+P474,1,core
+P476,5,core
+P477,2,core
+P480,5,core
+P483,5,core
+P488,3,core
+P489,1,core
+P490,7,core
+P492,7,core
+P493,6,core
+P494,5,core
+P495,6,core
+P496,7,core
+P497,3,core
+P498,7,core
+P499,4,core
+P500,4,core
+P501,5,core
+P502,1,core
+P503,7,core
+P505,6,core
+P507,7,core
+P509,6,core
+P510,2,core
+P511,5,core
+P512,1,core
+P515,3,core
+P516,1,core
+P517,5,core
+P518,4,core
+P519,7,core
+P520,6,core
+P521,1,core
+P525,4,core
+P527,7,core
+P529,5,core
+P530,7,core
+P533,6,core
+P534,3,core
+P535,1,core
+P536,4,core
+P537,4,core
+P538,2,core
+P540,1,core
+P541,7,core
+P542,1,core
+P543,7,core
+P544,3,core
+P545,4,core
+P546,4,core
+P547,7,core
+P548,4,core
+P549,2,core
+P550,2,core
+P552,1,core
+P554,1,core
+P556,7,core
+P557,3,core
+P558,3,core
+P560,4,core
+P567,7,core
+P568,7,core
+P573,5,core
+P574,1,core
+P575,5,core
+P577,1,core
+P579,2,core
+P580,5,core
+P581,5,core
+P582,7,core
+P583,4,core
+P584,1,core
+P585,3,core
+P586,4,core
+P593,7,core
+P594,5,core
+P596,6,core
+P597,4,core
+P601,7,core
+P602,7,core
+P604,5,core
+P605,7,core
+P607,5,core
+P609,3,core
+P610,1,core
+P612,1,core
+P613,7,core
+P616,1,core
+P617,1,core
+P620,5,core
+P621,1,core
+P624,5,core
+P625,3,core
+P626,6,core
+P629,2,core
+P631,6,core
+P632,4,core
+P633,2,core
+P635,4,core
+P636,1,core
+P638,5,core
+P639,1,core
+P641,1,core
+P642,1,core
+P643,1,core
+P644,2,core
+P645,1,core
+P646,1,core
+P647,1,core
+P648,4,core
+P650,1,core
+P652,1,core
+P653,1,core
+P654,6,core
+P656,2,core
+P657,7,core
+P658,4,core
+P661,7,core
+P663,7,core
+P664,7,core
+P665,5,core
+P666,6,core
+P667,1,core
+P668,5,core
+P669,7,core
+P670,1,core
+P671,1,core
+P674,1,core
+P675,1,core
+P676,2,core
+P680,4,core
+P683,7,core
+P685,5,core
+P686,7,core
+P688,1,core
+P690,3,core
+P691,4,core
+P692,2,core
+P694,4,core
+P696,7,core
+P697,5,core
+P698,5,core
+P700,7,core
+P704,6,core
+P705,2,core
+P708,6,core
+P709,6,core
+P711,7,core
+P712,7,core
+P714,7,core
+P715,7,core
+P716,7,core
+P718,1,core
+P719,6,core
+P721,7,core
+P723,2,core
+P724,6,core
+P725,7,core
+P726,1,core
+P727,7,core
+P728,7,core
+P729,7,core
+P732,6,core
+P733,3,core
+P734,7,core
+P735,6,core
+P736,7,core
+P737,2,core
+P739,7,core
+P740,3,core
+P741,5,core
+P742,6,core
+P743,7,core
+P744,2,core
+P746,1,core
+P748,1,core
+P750,6,core
+P752,1,core
+P753,6,core
+P754,7,core
+P755,2,core
+P756,7,core
+P759,7,core
+P760,7,core
+P761,4,core
+P762,2,core
+P764,1,core
+P765,7,core
+P769,3,core
+P771,3,core
+P772,2,core
+P773,6,core
+P774,5,core
+P777,2,core
+P780,2,core
+P784,6,core
+P786,7,core
+P788,2,core
+P789,3,core
+P790,7,core
+P792,2,core
+P795,2,core
+P798,6,core
+P801,6,core
+P802,2,core
+P804,7,core
+P805,3,core
+P806,6,core
+P807,6,core
+P808,6,core
+P810,6,core
+P812,4,core
+P816,4,core
+P818,4,core
+P819,3,core
+P820,7,core
+P822,4,core
+P823,3,core
+P826,4,core
+P827,4,core
+P828,6,core
+P829,4,core
+P831,3,core
+P835,5,core
+P836,2,core
+P839,1,core
+P840,5,core
+P842,2,core
+P843,2,core
+P844,4,core
+P845,2,core
+P847,6,core
+P848,7,core
+P849,7,core
+P850,2,core
+P851,6,core
+P852,1,core
+P853,7,core
+P854,7,core
+P856,3,core
+P860,3,core
+P861,1,core
+P862,2,core
+P863,7,core
+P865,7,core
+P869,7,core
+P870,7,core
+P871,7,core
+P872,7,core
+P873,6,core
+P876,7,core
+P877,3,core
+P880,6,core
+P881,6,core
+P882,3,core
+P885,3,core
+P887,4,core
+P888,1,core
+P890,1,core
+P891,3,core
+P893,4,core
+P894,1,core
+P899,7,core
+P902,4,core
+P903,1,core
+P906,5,core
+P907,6,core
+P908,7,core
+P910,7,core
+P911,7,core
+P912,1,core
+P913,6,core
+P914,6,core
+P915,6,core
+P917,5,core
+P918,4,core
+P919,6,core
+P920,2,core
+P921,1,core
+P926,3,core
+P927,7,core
+P928,7,core
+P929,3,core
+P932,7,core
+P933,4,core
+P934,5,core
+P935,6,core
+P937,7,core
+P938,5,core
+P939,7,core
+P940,3,core
+P941,2,core
+P942,7,core
+P943,7,core
+P945,6,core
+P947,7,core
+P948,2,core
+P950,7,core
+P951,7,core
+P953,7,core
+P955,1,core
+P956,6,core
+P958,6,core
+P960,6,core
+P961,1,core
+P963,6,core
+P964,6,core
+P966,2,core
+P967,3,core
+P968,6,core
+P972,5,core
+P975,4,core
+P976,4,core
+P978,2,core
+P980,4,core
+P981,1,core
+P983,3,core
+P985,4,core
+P989,7,core
+P990,4,core
+P991,2,core
+P992,4,core
+P994,7,core
+P995,6,core
+P998,2,core
+P1000,2,core
+P1002,2,core
+P1003,7,core
+P1004,5,core
+P1006,1,core
+P1007,7,core
+P1010,4,core
+P1011,4,core
+P1012,3,core
+P1013,1,core
+P1017,5,core
+P1019,3,core
+P1021,6,core
+P1023,1,core
+P1028,3,core
+P1029,1,core
+P1030,1,core
+P1031,2,core
+P1032,5,core
+P1033,1,core
+P1034,7,core
+P1035,4,core
+P1036,4,core
+P1038,4,core
+P1039,2,core
+P1040,3,core
+P1046,5,core
+P1047,5,core
+P1050,2,core
+P1052,1,core
+P1055,2,core
+P1057,1,core
+P1061,6,core
+P1062,4,core
+P1063,2,core
+P1064,3,core
+P1065,4,core
+P1068,4,core
+P1069,6,core
+P1070,5,core
+P1071,5,core
+P1072,4,core
+P1073,5,core
+P1074,3,core
+P1075,3,core
+P1076,6,core
+P1078,7,core
+P1079,1,core
+P1081,3,core
+P1084,4,core
+P1088,6,core
+P1089,6,core
+P1090,4,core
+P1091,5,core
+P1095,1,core
+P1096,5,core
+P1099,5,core
+P1102,5,core
+P1103,2,core
+P1104,6,core
+P1106,5,core
+P1107,5,core
+P1108,2,core
+P1111,5,core
+P1116,6,core
+P1117,1,core
+P1118,1,core
+P1120,3,core
+P1121,1,core
+P1122,2,core
+P1123,1,core
+P1124,3,core
+P1126,4,core
+P1129,3,core
+P1130,7,core
+P1131,3,core
+P1132,7,core
+P1133,6,core
+P1134,1,core
+P1135,2,core
+P1136,2,core
+P1140,4,core
+P1143,4,core
+P1144,4,core
+P1145,4,core
+P1146,5,core
+P1148,3,core
+P1152,3,core
+P1153,2,core
+P1154,1,core
+P1155,1,core
+P1159,5,core
+P1166,7,core
+P1169,1,core
+P1170,1,core
+P1172,2,core
+P1173,2,core
+P1174,4,core
+P1175,2,core
+P1176,3,core
+P1184,7,core
+P1185,1,core
+P1188,4,core
+P1192,4,core
+P1193,2,core
+P1198,6,core
+P1199,4,core
+P1200,4,core
+P1205,5,core
+P1207,2,core
+P1208,1,core
+P1210,5,core
+P1212,7,core
+P1213,5,core
+P1214,5,core
+P1215,5,core
+P1216,4,core
+P1219,2,core
+P1220,1,core
+P1222,1,core
+P1225,7,core
+P1226,6,core
+P1227,7,core
+P1229,5,core
+P1230,3,core
+P1231,2,core
+P1232,5,core
+P1233,3,core
+P1236,7,core
+P1237,2,core
+P1239,3,core
+P1240,7,core
+P1243,3,core
+P1244,2,core
+P1245,2,core
+P1247,7,core
+P1248,5,core
+P1250,1,core
+P1251,4,core
+P1252,5,core
+P1255,6,core
+P1257,5,core
+P1258,7,core
+P1259,1,core
+P1261,2,core
+P1263,7,core
+P1264,5,core
+P1265,4,core
+P1267,1,core
+P1268,5,core
+P1271,2,core
+P1273,5,core
+P1275,4,core
+P1276,5,core
+P1278,2,core
+P1279,4,core
+P1280,7,core
+P1282,6,core
+P1284,7,core
+P1286,7,core
+P1287,1,core
+P1288,6,core
+P1290,6,core
+P1291,2,core
+P1292,6,core
+P1293,3,core
+P1294,7,core
+P1298,3,core
+P1301,4,core
+P1302,6,core
+P1304,6,core
+P1305,5,core
+P1307,2,core
+P1311,4,core
+P1312,5,core
+P1314,7,core
+P1315,2,core
+P1316,3,core
+P1317,4,core
+P1320,1,core
+P1326,7,core
+P1328,3,core
+P1332,4,core
+P1333,4,core
+P1336,6,core
+P1340,4,core
+P1348,7,core
+P1350,1,core
+P1351,3,core
+P1352,5,core
+P1355,5,core
+P1356,3,core
+P1357,6,core
+P1364,6,core
+P1365,2,core
+P1368,6,core
+P1372,1,core
+P1373,1,core
+P1375,1,core
+P9,,isolates
+P14,,isolates
+P17,,isolates
+P19,,isolates
+P23,,isolates
+P27,,isolates
+P28,,isolates
+P29,,isolates
+P35,,isolates
+P39,,isolates
+P41,,isolates
+P42,,isolates
+P43,,isolates
+P44,,isolates
+P46,,isolates
+P50,,isolates
+P58,,isolates
+P61,,isolates
+P65,,isolates
+P66,,isolates
+P67,,isolates
+P68,,isolates
+P69,,isolates
+P70,,isolates
+P76,,isolates
+P77,,isolates
+P81,,isolates
+P84,,isolates
+P101,,isolates
+P102,,isolates
+P107,,isolates
+P109,,isolates
+P111,,isolates
+P112,,isolates
+P127,,isolates
+P135,,isolates
+P139,,isolates
+P148,,isolates
+P153,,isolates
+P155,,isolates
+P157,,isolates
+P163,,isolates
+P164,,isolates
+P168,,isolates
+P169,,isolates
+P172,,isolates
+P175,,isolates
+P176,,isolates
+P177,,isolates
+P178,,isolates
+P189,,isolates
+P199,,isolates
+P213,,isolates
+P215,,isolates
+P235,,isolates
+P251,,isolates
+P254,,isolates
+P255,,isolates
+P257,,isolates
+P258,,isolates
+P259,,isolates
+P263,,isolates
+P268,,isolates
+P287,,isolates
+P293,,isolates
+P297,,isolates
+P302,,isolates
+P311,,isolates
+P313,,isolates
+P318,,isolates
+P335,,isolates
+P338,,isolates
+P351,,isolates
+P354,,isolates
+P360,,isolates
+P365,,isolates
+P369,,isolates
+P376,,isolates
+P383,,isolates
+P384,,isolates
+P385,,isolates
+P387,,isolates
+P405,,isolates
+P416,,isolates
+P421,,isolates
+P450,,isolates
+P455,,isolates
+P458,,isolates
+P459,,isolates
+P461,,isolates
+P463,,isolates
+P464,,isolates
+P465,,isolates
+P468,,isolates
+P470,,isolates
+P471,,isolates
+P473,,isolates
+P475,,isolates
+P478,,isolates
+P482,,isolates
+P487,,isolates
+P504,,isolates
+P508,,isolates
+P528,,isolates
+P531,,isolates
+P532,,isolates
+P539,,isolates
+P551,,isolates
+P569,,isolates
+P578,,isolates
+P587,,isolates
+P589,,isolates
+P592,,isolates
+P598,,isolates
+P603,,isolates
+P606,,isolates
+P608,,isolates
+P618,,isolates
+P619,,isolates
+P623,,isolates
+P628,,isolates
+P634,,isolates
+P637,,isolates
+P640,,isolates
+P649,,isolates
+P655,,isolates
+P659,,isolates
+P662,,isolates
+P672,,isolates
+P673,,isolates
+P678,,isolates
+P682,,isolates
+P684,,isolates
+P699,,isolates
+P702,,isolates
+P703,,isolates
+P720,,isolates
+P731,,isolates
+P745,,isolates
+P747,,isolates
+P751,,isolates
+P757,,isolates
+P758,,isolates
+P763,,isolates
+P766,,isolates
+P768,,isolates
+P770,,isolates
+P782,,isolates
+P783,,isolates
+P785,,isolates
+P787,,isolates
+P791,,isolates
+P794,,isolates
+P796,,isolates
+P800,,isolates
+P813,,isolates
+P825,,isolates
+P830,,isolates
+P832,,isolates
+P833,,isolates
+P834,,isolates
+P838,,isolates
+P841,,isolates
+P846,,isolates
+P857,,isolates
+P883,,isolates
+P886,,isolates
+P889,,isolates
+P892,,isolates
+P895,,isolates
+P900,,isolates
+P901,,isolates
+P904,,isolates
+P916,,isolates
+P925,,isolates
+P931,,isolates
+P936,,isolates
+P944,,isolates
+P946,,isolates
+P957,,isolates
+P962,,isolates
+P965,,isolates
+P969,,isolates
+P970,,isolates
+P971,,isolates
+P974,,isolates
+P977,,isolates
+P979,,isolates
+P982,,isolates
+P984,,isolates
+P993,,isolates
+P999,,isolates
+P1001,,isolates
+P1008,,isolates
+P1014,,isolates
+P1016,,isolates
+P1018,,isolates
+P1020,,isolates
+P1024,,isolates
+P1026,,isolates
+P1027,,isolates
+P1042,,isolates
+P1048,,isolates
+P1053,,isolates
+P1054,,isolates
+P1056,,isolates
+P1059,,isolates
+P1060,,isolates
+P1077,,isolates
+P1080,,isolates
+P1083,,isolates
+P1085,,isolates
+P1087,,isolates
+P1092,,isolates
+P1094,,isolates
+P1098,,isolates
+P1101,,isolates
+P1105,,isolates
+P1109,,isolates
+P1110,,isolates
+P1113,,isolates
+P1114,,isolates
+P1115,,isolates
+P1119,,isolates
+P1125,,isolates
+P1128,,isolates
+P1137,,isolates
+P1138,,isolates
+P1139,,isolates
+P1141,,isolates
+P1142,,isolates
+P1149,,isolates
+P1156,,isolates
+P1160,,isolates
+P1161,,isolates
+P1163,,isolates
+P1164,,isolates
+P1165,,isolates
+P1167,,isolates
+P1168,,isolates
+P1171,,isolates
+P1177,,isolates
+P1178,,isolates
+P1179,,isolates
+P1180,,isolates
+P1181,,isolates
+P1182,,isolates
+P1183,,isolates
+P1186,,isolates
+P1187,,isolates
+P1189,,isolates
+P1191,,isolates
+P1201,,isolates
+P1202,,isolates
+P1204,,isolates
+P1209,,isolates
+P1211,,isolates
+P1223,,isolates
+P1234,,isolates
+P1238,,isolates
+P1241,,isolates
+P1246,,isolates
+P1249,,isolates
+P1253,,isolates
+P1254,,isolates
+P1256,,isolates
+P1260,,isolates
+P1262,,isolates
+P1270,,isolates
+P1272,,isolates
+P1274,,isolates
+P1277,,isolates
+P1283,,isolates
+P1289,,isolates
+P1296,,isolates
+P1297,,isolates
+P1299,,isolates
+P1300,,isolates
+P1308,,isolates
+P1309,,isolates
+P1310,,isolates
+P1313,,isolates
+P1318,,isolates
+P1319,,isolates
+P1321,,isolates
+P1322,,isolates
+P1323,,isolates
+P1324,,isolates
+P1325,,isolates
+P1327,,isolates
+P1329,,isolates
+P1330,,isolates
+P1334,,isolates
+P1335,,isolates
+P1337,,isolates
+P1338,,isolates
+P1339,,isolates
+P1341,,isolates
+P1343,,isolates
+P1344,,isolates
+P1345,,isolates
+P1346,,isolates
+P1347,,isolates
+P1353,,isolates
+P1358,,isolates
+P1360,,isolates
+P1361,,isolates
+P1362,,isolates
+P1366,,isolates
+P1367,,isolates
+P1369,,isolates
+P1370,,isolates
+P1371,,isolates
+P3,,isolated cluster
+P7,,isolated cluster
+P8,,isolated cluster
+P30,,isolated cluster
+P51,,isolated cluster
+P56,,isolated cluster
+P59,,isolated cluster
+P62,,isolated cluster
+P74,,isolated cluster
+P75,,isolated cluster
+P78,,isolated cluster
+P83,,isolated cluster
+P88,,isolated cluster
+P98,,isolated cluster
+P100,,isolated cluster
+P108,,isolated cluster
+P110,,isolated cluster
+P116,,isolated cluster
+P120,,isolated cluster
+P121,,isolated cluster
+P128,,isolated cluster
+P136,,isolated cluster
+P138,,isolated cluster
+P141,,isolated cluster
+P147,,isolated cluster
+P149,,isolated cluster
+P166,,isolated cluster
+P171,,isolated cluster
+P174,,isolated cluster
+P180,,isolated cluster
+P197,,isolated cluster
+P204,,isolated cluster
+P207,,isolated cluster
+P208,,isolated cluster
+P209,,isolated cluster
+P214,,isolated cluster
+P217,,isolated cluster
+P226,,isolated cluster
+P229,,isolated cluster
+P231,,isolated cluster
+P248,,isolated cluster
+P250,,isolated cluster
+P253,,isolated cluster
+P261,,isolated cluster
+P271,,isolated cluster
+P273,,isolated cluster
+P274,,isolated cluster
+P281,,isolated cluster
+P284,,isolated cluster
+P285,,isolated cluster
+P288,,isolated cluster
+P290,,isolated cluster
+P296,,isolated cluster
+P301,,isolated cluster
+P304,,isolated cluster
+P312,,isolated cluster
+P314,,isolated cluster
+P319,,isolated cluster
+P332,,isolated cluster
+P348,,isolated cluster
+P352,,isolated cluster
+P364,,isolated cluster
+P370,,isolated cluster
+P375,,isolated cluster
+P381,,isolated cluster
+P390,,isolated cluster
+P395,,isolated cluster
+P399,,isolated cluster
+P407,,isolated cluster
+P408,,isolated cluster
+P418,,isolated cluster
+P422,,isolated cluster
+P424,,isolated cluster
+P439,,isolated cluster
+P447,,isolated cluster
+P456,,isolated cluster
+P457,,isolated cluster
+P460,,isolated cluster
+P462,,isolated cluster
+P479,,isolated cluster
+P481,,isolated cluster
+P484,,isolated cluster
+P485,,isolated cluster
+P486,,isolated cluster
+P491,,isolated cluster
+P506,,isolated cluster
+P513,,isolated cluster
+P514,,isolated cluster
+P522,,isolated cluster
+P523,,isolated cluster
+P524,,isolated cluster
+P526,,isolated cluster
+P553,,isolated cluster
+P555,,isolated cluster
+P559,,isolated cluster
+P561,,isolated cluster
+P562,,isolated cluster
+P563,,isolated cluster
+P564,,isolated cluster
+P565,,isolated cluster
+P566,,isolated cluster
+P570,,isolated cluster
+P571,,isolated cluster
+P572,,isolated cluster
+P576,,isolated cluster
+P588,,isolated cluster
+P590,,isolated cluster
+P591,,isolated cluster
+P595,,isolated cluster
+P599,,isolated cluster
+P600,,isolated cluster
+P611,,isolated cluster
+P614,,isolated cluster
+P615,,isolated cluster
+P622,,isolated cluster
+P627,,isolated cluster
+P630,,isolated cluster
+P651,,isolated cluster
+P660,,isolated cluster
+P677,,isolated cluster
+P679,,isolated cluster
+P681,,isolated cluster
+P687,,isolated cluster
+P689,,isolated cluster
+P693,,isolated cluster
+P695,,isolated cluster
+P701,,isolated cluster
+P706,,isolated cluster
+P707,,isolated cluster
+P710,,isolated cluster
+P713,,isolated cluster
+P717,,isolated cluster
+P722,,isolated cluster
+P730,,isolated cluster
+P738,,isolated cluster
+P749,,isolated cluster
+P767,,isolated cluster
+P775,,isolated cluster
+P776,,isolated cluster
+P778,,isolated cluster
+P779,,isolated cluster
+P781,,isolated cluster
+P793,,isolated cluster
+P797,,isolated cluster
+P799,,isolated cluster
+P803,,isolated cluster
+P809,,isolated cluster
+P811,,isolated cluster
+P814,,isolated cluster
+P815,,isolated cluster
+P817,,isolated cluster
+P821,,isolated cluster
+P824,,isolated cluster
+P837,,isolated cluster
+P855,,isolated cluster
+P858,,isolated cluster
+P859,,isolated cluster
+P864,,isolated cluster
+P866,,isolated cluster
+P867,,isolated cluster
+P868,,isolated cluster
+P874,,isolated cluster
+P875,,isolated cluster
+P878,,isolated cluster
+P879,,isolated cluster
+P884,,isolated cluster
+P896,,isolated cluster
+P897,,isolated cluster
+P898,,isolated cluster
+P905,,isolated cluster
+P909,,isolated cluster
+P922,,isolated cluster
+P923,,isolated cluster
+P924,,isolated cluster
+P930,,isolated cluster
+P949,,isolated cluster
+P952,,isolated cluster
+P954,,isolated cluster
+P959,,isolated cluster
+P973,,isolated cluster
+P986,,isolated cluster
+P987,,isolated cluster
+P988,,isolated cluster
+P996,,isolated cluster
+P997,,isolated cluster
+P1005,,isolated cluster
+P1009,,isolated cluster
+P1015,,isolated cluster
+P1022,,isolated cluster
+P1025,,isolated cluster
+P1037,,isolated cluster
+P1041,,isolated cluster
+P1043,,isolated cluster
+P1044,,isolated cluster
+P1045,,isolated cluster
+P1049,,isolated cluster
+P1051,,isolated cluster
+P1058,,isolated cluster
+P1066,,isolated cluster
+P1067,,isolated cluster
+P1082,,isolated cluster
+P1086,,isolated cluster
+P1093,,isolated cluster
+P1097,,isolated cluster
+P1100,,isolated cluster
+P1112,,isolated cluster
+P1127,,isolated cluster
+P1147,,isolated cluster
+P1150,,isolated cluster
+P1151,,isolated cluster
+P1157,,isolated cluster
+P1158,,isolated cluster
+P1162,,isolated cluster
+P1190,,isolated cluster
+P1194,,isolated cluster
+P1195,,isolated cluster
+P1196,,isolated cluster
+P1197,,isolated cluster
+P1203,,isolated cluster
+P1206,,isolated cluster
+P1217,,isolated cluster
+P1218,,isolated cluster
+P1221,,isolated cluster
+P1224,,isolated cluster
+P1228,,isolated cluster
+P1235,,isolated cluster
+P1242,,isolated cluster
+P1266,,isolated cluster
+P1269,,isolated cluster
+P1281,,isolated cluster
+P1285,,isolated cluster
+P1295,,isolated cluster
+P1303,,isolated cluster
+P1306,,isolated cluster
+P1331,,isolated cluster
+P1342,,isolated cluster
+P1349,,isolated cluster
+P1354,,isolated cluster
+P1359,,isolated cluster
+P1363,,isolated cluster
+P1374,,isolated cluster
